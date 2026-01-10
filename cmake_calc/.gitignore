@@ -1,0 +1,55 @@
+# =========================
+# Build directories
+# =========================
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+
+# =========================
+# Compiled binaries
+# =========================
+calculator
+*.out
+*.exe
+
+# =========================
+# Object files
+# =========================
+*.o
+*.obj
+
+# =========================
+# Libraries
+# =========================
+*.a
+*.so
+*.dll
+
+# =========================
+# Editor / IDE files
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# =========================
+# OS-specific files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs and temporary files
+# =========================
+*.log
+*.tmp
+
+# =========================
+# Jenkins / CI artifacts
+# =========================
+workspace/
