@@ -21,12 +21,12 @@ factorial(int n)
 	* Input validation
 	* Exit option
 ## Task 3: Modify the Makefile (Student C)
-Enhance the Makefile to support:
+* Enhance the Makefile to support:
 	* make debug → builds with -g
 	* make run → runs calculator
 	* make clean
 	* Auto-rebuild on header change
 ## Task 4: Integration & Testing (Student D)
-Write:
+* Write:
 	* test_cases.txt
 	* README.md
