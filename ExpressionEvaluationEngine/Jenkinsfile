@@ -1,0 +1,58 @@
+pipeline {
+    agent any
+
+    tools {
+        cmake 'cmake'   // optional if configured in Jenkins tools
+    }
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/<username>/<repo>.git'
+            }
+        }
+
+        stage('Configure') {
+            steps {
+                sh '''
+                mkdir -p build
+                cd build
+                cmake ..
+                '''
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh '''
+                cd build
+                make -j$(nproc)
+                '''
+            }
+        }
+
+        stage('Test') {
+            when {
+                expression { fileExists('build/CTestTestfile.cmake') }
+            }
+            steps {
+                sh '''
+                cd build
+                ctest --output-on-failure
+                '''
+            }
+        }
+    }
+
+    post {
+        success {
+            echo '✅ Build successful'
+        }
+        failure {
+            echo '❌ Build failed'
+        }
+    }
+}
+
