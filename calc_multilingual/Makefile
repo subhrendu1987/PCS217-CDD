@@ -1,3 +1,4 @@
+.PHONY: all say_hello generate clean
 # Compiler definitions
 CC      = gcc
 CXX     = g++
@@ -13,6 +14,9 @@ CPP_SRC = main.cpp
 
 # Object files
 OBJ = calc.o main.o
+
+# Phony targets
+.PHONY: all clean rebuild
 
 # Default target
 all: $(TARGET)
