@@ -1,6 +1,7 @@
 # CMake based compilation of Calculator program
 
-## 📁 Project Structure
+## Project Structure
+```
 calculator/
 ├── src/
 │ ├── main.c # Entry point of the application
@@ -11,7 +12,7 @@ calculator/
 │ └── calc.h # Function declarations
 ├── CMakeLists.txt # CMake build configuration
 └── README.md # Project documentation
-
+```
 ## Compilation Procedure
 ```
 mkdir build
